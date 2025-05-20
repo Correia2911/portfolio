@@ -1,0 +1,185 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-color: #ff4500;
+    --hover-color: #e63900;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --font-family: Arial, sans-serif;
+}
+
+/* General Styles */
+body {
+    background-color: #001f3f; /* Dark blue background */
+    color: white; /* White text for contrast */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centers the content */
+}
+
+/* Main Container */
+#menuBG {
+    display: flex; /* Enables Flexbox for alignment */
+    flex-direction: column; /* Stacks child elements vertically */
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #003366; /* Slightly lighter blue */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    align-items: center; /* Centers child elements horizontally */
+}
+
+/* Parent container for menu sections */
+#frmMenu {
+    display: flex; /* Enables Flexbox for the menu sections */
+    flex-wrap: wrap; /* Allows wrapping if the screen is too small */
+    justify-content: space-between; /* Adds space between the menu sections */
+    gap: 20px; /* Adds spacing between the sections */
+    margin-bottom: 20px; /* Adds spacing below the menu */
+    width: 100%; /* Ensures it matches the width of #menuBG */
+    align-items: flex-start; /* Aligns the menu sections at the top */
+}
+
+/* Title */
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+#btnOrder {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: white;
+    color: #003366;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#btnOrder:hover {
+    background-color: #ddd;
+}
+
+/* Menu Container */
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Individual Menu Sections */
+.menu {
+    flex: 1;
+    padding: 15px;
+    background-color: #00509e; /* Blue for menu sections */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Menu Heading Styles */
+.menu h3 {
+    font-family: 'Verdana', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Label and Input Styles */
+.menu label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: #555;
+}
+
+.menu input[type="radio"],
+.menu input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.menu input {
+    margin-right: 10px;
+}
+
+/* Cart Section */
+#cart {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #00509e;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#cart h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#showText {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+#totalPrice {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #menuBG {
+        width: 100%; /* Makes the container take full width on smaller screens */
+        padding: 10px; /* Reduces padding for smaller screens */
+    }
+
+    #btnOrder {
+        width: 100%;
+    }
+
+    .menu-container {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%; /* Makes the menu sections take full width on smaller screens */
+        max-width: 100%; /* Ensures sections don't exceed the screen width */
+        padding: 10px; /* Reduces padding for smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .menu label {
+        font-size: 14px; /* Reduces font size for smaller screens */
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    #frmMenu {
+        flex-direction: column; /* Stacks the sections vertically on smaller screens */
+    }
+}
