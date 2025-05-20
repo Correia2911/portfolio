@@ -1,0 +1,49 @@
+/* This container includes our table and canvas. */
+.center-container {
+    /* Sets the width of the container. */
+    width: 608px;
+    /* Centers the container. */
+    margin: 0 auto;
+    /* Positions the container 50px down from the top. */
+    margin-top: 50px;
+}
+
+table {
+    /* Collapses table borders into a single border. */
+    border-collapse: collapse;
+    /* Hides the outer borders of the table. */
+    border-style: hidden;
+}
+
+td {
+    /* Changes the cursor to a pointer when hovering over td elements */
+    cursor: pointer;
+    /* Sets a border style for table cells */
+    border: 4px solid rgba(30, 122, 197, 0.534);
+    /* Removes default padding inside td elements */
+    padding: 0px;
+    /* Specifies width and height for each table cell */
+    width: 200px;
+    height: 200px;
+    /* Enhances the contrast for cell content */
+    filter: contrast(3);
+    /* Ensures the background image fits entirely within the square */
+    background-size: cover; /* Scales the image to cover the entire square */
+    background-position: center; /* Centers the image within the square */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+canvas {
+    /* Positions the canvas at the top left corner of the container */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Ensures the canvas overlays the table */
+    z-index: 10;
+    /* Makes the canvas non-interactive */
+    pointer-events: none;
+}
+
+h1 {
+    text-align: center;
+}
