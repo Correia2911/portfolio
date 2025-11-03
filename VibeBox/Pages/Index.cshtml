@@ -1,0 +1,36 @@
+@page
+@model VibeBox.Pages.IndexModel
+@{
+    ViewData["Title"] = "VibeBox";
+    Layout = null; // Using null layout for standalone page
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Welcome to VibeBox 🎵</h1>
+
+        <div class="video-wrapper">
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="YouTube video player" 
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div class="box" id="animateBox"></div>
+    </div>
+
+    <script src="~/js/site.js"></script>
+</body>
+</html>
